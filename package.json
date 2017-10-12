@@ -1,7 +1,7 @@
 {
     "name": "badgeforce-app",
     "productName": "badgeforce-app",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "BadgeForce wallet for viewing badges and interacting with them",
     "main": "src/index.js",
     "scripts": {
@@ -29,7 +29,10 @@
                 ]
             },
             "electronPackagerConfig": {
-                "packageManager": "yarn"
+                "packageManager": "yarn",
+                "icon": "./icon.icns",
+                "electronVersion": "1.4.4",
+                "asar": true
             },
             "electronWinstallerConfig": {
                 "name": "badgeforce_app"
@@ -37,12 +40,16 @@
             "electronInstallerDebian": {},
             "electronInstallerRedhat": {},
             "github_repository": {
-                "owner": "",
-                "name": ""
+                "owner": "BadgeForce",
+                "name": "badgeforce-app"
             },
             "windowsStoreConfig": {
                 "packageName": "",
                 "name": "badgeforceapp"
+            },
+            "electronInstallerDMG": {
+                "icon": "./icon.icns",
+                "format": "ULFO"
             }
         }
     },

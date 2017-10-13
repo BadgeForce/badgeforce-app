@@ -916,7 +916,7 @@ babylon@^6.17.0, babylon@^6.18.0:
 
 "badge-rest-engine@https://github.com/BadgeForce/badge-rest-engine.git#0.0.1":
   version "0.0.1"
-  resolved "https://github.com/BadgeForce/badge-rest-engine.git#e3a59363e88508e9e18c83a8859220a011ef2da1"
+  resolved "https://github.com/BadgeForce/badge-rest-engine.git#037bc460b5be61df69a16922c2e830dd6b11e702"
   dependencies:
     BadgeForceToken "https://github.com/BadgeForce/BadgeForceToken.git#0.0.2"
     badgeforce "https://github.com/BadgeForce/badgeforce.git#0.0.2"

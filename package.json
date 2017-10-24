@@ -1,22 +1,75 @@
 {
-  "name": "Badgeforce",
-  "version": "0.1.0",
-  "private": true,
-  "devDependencies": {
-    "react-scripts": "1.0.14"
-  },
-  "dependencies": {
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-router-dom": "^4.2.2",
-    "typestyle": "^1.4.2"
-  },
-  "scripts": {
-    "electron": "electron .",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "main": "main.js"
+    "name": "badgeforce-app",
+    "productName": "badgeforce-app",
+    "version": "0.0.2",
+    "description": "BadgeForce wallet for viewing badges and interacting with them",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "electron-forge start",
+        "package": "electron-forge package",
+        "make": "electron-forge make",
+        "publish": "electron-forge publish",
+        "lint": "echo \"No linting configured\""
+    },
+    "keywords": [],
+    "author": "khalil.claybon",
+    "license": "MIT",
+    "config": {
+        "forge": {
+            "make_targets": {
+                "win32": [
+                    "squirrel"
+                ],
+                "darwin": [
+                    "zip"
+                ],
+                "linux": [
+                    "deb",
+                    "rpm"
+                ]
+            },
+            "electronPackagerConfig": {
+                "packageManager": "yarn",
+                "icon": "./icon.icns",
+                "electronVersion": "1.4.4",
+                "asar": true
+            },
+            "electronWinstallerConfig": {
+                "name": "badgeforce_app"
+            },
+            "electronInstallerDebian": {},
+            "electronInstallerRedhat": {},
+            "github_repository": {
+                "owner": "BadgeForce",
+                "name": "badgeforce-app"
+            },
+            "windowsStoreConfig": {
+                "packageName": "",
+                "name": "badgeforceapp"
+            },
+            "electronInstallerDMG": {
+                "icon": "./icon.icns",
+                "format": "ULFO"
+            }
+        }
+    },
+    "dependencies": {
+        "badge-rest-engine": "https://github.com/BadgeForce/badge-rest-engine.git#0.0.1",
+        "electron-compile": "^6.4.2",
+        "electron-devtools-installer": "^2.1.0",
+        "electron-squirrel-startup": "^1.0.0",
+        "react": "^15.4.1",
+        "react-dom": "^15.4.1",
+        "react-hot-loader": "^3.0.0-beta.6",
+        "react-router-dom": "^4.2.2",
+        "typestyle": "^1.4.2"
+    },
+    "devDependencies": {
+        "babel-plugin-transform-async-to-generator": "^6.24.1",
+        "babel-plugin-transform-es2015-classes": "^6.24.1",
+        "babel-preset-env": "^1.6.0",
+        "babel-preset-react": "^6.24.1",
+        "electron-forge": "^4.1.2",
+        "electron-prebuilt-compile": "1.7.8"
+    }
 }
